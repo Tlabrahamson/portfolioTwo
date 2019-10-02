@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/iziToast.min.css">
     <title>Portfolio Two | Electric Boogaloo</title>
 </head>
 <body>
@@ -37,18 +39,19 @@
                         </p>
                     </div>
                     <!-- Inputs -->
-                    <form id="myForm" method="POST">
-                        <input class="formInputs" type="text" name="name" placeholder="Name">
-                        <input class="formInputs" type="text" name="email" placeholder="Email">
-                        <input class="formInputs" type="tel" name="pNumber" placeholder="Phone Number(Optional)">
-                        <textarea class="formInputs" name="message" placeholder="Leave a message"></textarea>
-                        <button id="submitButton">Submit</button>
+                    <form id="myForm" method="POST" action="scripts/create.php">
+                        <input id="name" class="formInputs" type="text" name="name" placeholder="Name">
+                        <input id="email" class="formInputs" type="text" name="email" placeholder="Email">
+                        <textarea id="message" class="formInputs" name="message" placeholder="Leave a message"></textarea>
+                        <button type="submit" id="submitButton">Submit</button>
                     </form>
                 </div>
             </div>
         <div><?php require('components/footer.php'); ?></div>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="js/iziToast.min.js" type="text/javascript"></script>
+    <script src="js/submitButton.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/nav.js"></script>
 </body>
